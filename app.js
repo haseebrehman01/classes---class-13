@@ -1,6 +1,6 @@
 // apna college (Prtotypes , classes , constructor)
 
-// prototypes>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// prototypes>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // This technique is called prototype-based inheritance in JavaScript.
 // This is an object named 'employee' with a method 'calcTax'
 // const employee = {
@@ -9,19 +9,19 @@
 //     }
 // };
 
-// // This is an object named 'haseeb' with a property 'salary'
+// This is an object named 'haseeb' with a property 'salary'
 // const haseeb = {
 //     salary: 60000 // This object has a salary property set to 60000
 // };
 
-// // Here we set the prototype of 'haseeb' to 'employee'
-// // This means 'haseeb' will now inherit properties and methods from 'employee'
+// Here we set the prototype of 'haseeb' to 'employee'
+// This means 'haseeb' will now inherit properties and methods from 'employee'
 // haseeb.__proto__ = employee;
 
-// // Now we call the 'calcTax' method on the 'haseeb' object
-// // Even though 'haseeb' does not have 'calcTax' directly, 
-// // it will find and use it from the 'employee' object via the prototype chain
-// console.log(haseeb.calcTax()); // Outputs: "Tax rate is 20%"
+// Now we call the 'calcTax' method on the 'haseeb' object
+// Even though 'haseeb' does not have 'calcTax' directly, 
+// it will find and use it from the 'employee' object via the prototype chain
+// haseeb.calcTax(); // Outputs: "Tax rate is 20%"
 
 
 // This is an example of method "overriding in JavaScript", where an object can have a method with the same name as one inherited from its prototype, and the object's own method will be used.
@@ -40,7 +40,7 @@
 // }
 
 // haseeb.__proto__ =  employee
-// console.log(haseeb.calcTax()) // Outputs: "Tax rate is 70%"
+// haseeb.calcTax() // Outputs: "Tax rate is 70%"
 
 
 // sir Ishaq bhojani>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -59,8 +59,8 @@
 //     amount : "something",
 //     details : "something"
 // }
-// // console.log(product1,product2,product3)
-// console.log(product1 instanceof Product,product2 instanceof Product,product3 instanceof Product)
+// console.log(product1,product2,product3)
+// console.log(product1 instanceof Product,product2 instanceof Product,product3 instanceof Product)//true,true,false
 
 
 // Apna college
@@ -81,12 +81,12 @@
 
 // const fortuner = new ToyotaCar() 
 // const lexus = new ToyotaCar() 
-// // console.log( typeof fortuner , typeof lexus) 
-// // console.log( typeof fortuner.start , typeof lexus.stop)
-// // console.log( typeof ToyotaCar )
+// console.log( typeof fortuner , typeof lexus) //object,object
+// console.log( typeof fortuner.start , typeof lexus.stop)//function,function
+// console.log( typeof ToyotaCar )//function
 // fortuner.setBrand("Fortuner 12")
 // lexus.setBrand("lexus 12")
-// console.log(fortuner.brand,lexus.brand)
+// console.log(typeof fortuner.brand,lexus.brand)//string/number,lexus 12
 // fortuner.start()
 // lexus.start()
 
@@ -225,3 +225,67 @@
 //  lexus.start();     // Outputs: start car
 
 
+// Inheritance in JavaScript (classes) (apna college)>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Note: If both the parent and child have the same method, the child's method will be used (method overriding).
+// Class inheritance is the process of passing down properties and methods from a parent class to a child class.
+//example
+// class Parent {
+//     greet(){
+//         console.log("hello i am parent")
+//     }
+// }
+// class Child extends Parent {
+// }
+// const obj =  new Child()
+// obj.greet()
+
+// example 2
+// class Person{
+//     constructor(){
+//         this.species = "homo sapiens"
+//     }
+//     eat(){
+//         console.log("eat")
+//     }
+// sleep(){
+//     console.log("sleep")
+// }
+// work(){
+//     console.log("do nothing")
+// }
+// }
+
+
+// class Engineer extends Person{
+// work(){
+//     console.log("solve problem,build something")
+// }
+// }
+// class Doctor extends Engineer{
+//     woek(){
+//         console.log("Treat patients")
+//     }
+//     }
+
+// class Doctor extends Person{
+//     work(){
+//         console.log("Treat patients")
+//     }
+//     }
+
+    // const haseeb = new Doctor()
+    // haseeb.sleep()
+    // const ali = new Engineer()
+    // ali.work()//solve problem,build something
+
+// when add constructor
+    // const e1 = new Person()
+    // console.log(e1)//homo sapiens
+    // const e2 = new  Engineer()
+    // console.log(e2)//homo sapiens (because class inheritance)
+
+
+
+    //super keyword
+
+    
