@@ -286,6 +286,141 @@
 
 
 
-    //super keyword
+    //super keyword >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+//     class Person{
+//     constructor(){
+//         console.log("enter parent constructor")
+//         this.species = "homo sapiens"
+//     }
+//     eat(){
+//         console.log("eat")
+//     }
+// sleep(){
+//     console.log("sleep")
+// }
+
+// }
+
+
+// class Engineer extends Person{
+//     constructor(branch){
+//         console.log("enter child constructor")
+//         super()//to invoke parent class instructor
+//         this.branch = branch //in js child class is called "derived class"
+//         console.log("exit child constructor")
+//     }
+// work(){
+//     console.log("solve problem,build something")
+// }
+// }
+// let engObj = new Engineer("chemical engineer")
+// // console.log(engObj)
+
+
+
+
+// // Define a class named Person
+// class Person {
+//     // Constructor to initialize the Person object with a name
+//     constructor(name) {
+//         this.species = "homo sapiens"; // Set the species property
+//         this.name = name; // Set the name property
+//     }
+
+//     // Method to simulate eating
+//     eat() {
+//         console.log("eat"); // Log message for eating
+//     }
+
+//     // Method to simulate sleeping
+//     sleep() {
+//         console.log("sleep"); // Log message for sleeping
+//     }
+// }
+
+// // Define a class named Engineer that extends the Person class
+// class Engineer extends Person {
+//     // Constructor to initialize the Engineer object
+//     constructor(name) {
+//         super(name); // Call the Person constructor with the name parameter
+//     }
     
+//     // Method to simulate work behavior in the Engineer class
+//     work() {
+//         super.eat(); // Call the eat method from the parent class (Person)
+//     }
+// }
+
+// // Create an instance of the Engineer class with the name "haseeb"
+// let engObj = new Engineer("haseeb");
+
+// // Log the Engineer object to the console
+// console.log(engObj); 
+// // Output: Engineer { species: 'homo sapiens', name: 'haseeb' }
+
+// // Call the work method on the Engineer instance
+// engObj.work(); 
+// // Output: 
+// // eat (from the Person class)
+
+
+
+// Let's Practice
+// question 1
+// Define a variable to hold secret information
+// let Data = "secret info"; // This variable holds the secret data
+
+// // Define a class named User
+// class User {
+//     // Constructor to initialize User object with name and email
+//     constructor(name, email) {
+//         this.name = name; // Set the name property
+//         this.email = email; // Set the email property
+//     }
+
+//     // Method to view the secret data
+//     viewData() {
+//         console.log("Data = ", Data); // Log the secret data to the console
+//     }
+// }
+
+// // Create instances of the User class for students and a teacher
+// const student1 = new User("Rameez", "rameez@gmail.com"); // Create a student instance
+// const student2 = new User("Ali", "ali@gmail.com"); // Create another student instance
+// const teacher1 = new User("Aliimran", "aliimran@gmail.com"); // Create a teacher instance
+
+// // Log student1's details to the console
+// console.log(student1); // Output the details of student1
+// student1.viewData(); // Call viewData to display the secret data
+
+// // Log student2's details to the console
+// console.log(student2); // Output the details of student2
+// student2.viewData(); // Call viewData to display the secret data for student2
+
+// // Call viewData on the teacher instance to display the secret data
+// teacher1.viewData(); // Output the secret data for teacher1
+
+// // Question 2
+// // Define a class named Admin that extends the User class
+// class Admin extends User {
+//     // Constructor to initialize Admin object
+//     constructor(name, email) {
+//         super(name, email); // Call the User constructor to initialize name and email
+//     }
+
+//     // Method to edit the secret data
+//     editData() {
+//         Data = "some new value"; // Change the value of the secret data
+//     }
+// }
+
+// // Create an instance of the Admin class
+// const admin1 = new Admin("admin", "college@gmail.com"); // Create an admin instance
+// console.log(admin1); // Log the details of the admin instance
+
+// // Call editData method on the admin instance to change the secret data
+// admin1.editData(); // This updates the Data variable to a new value
+
+// // Call viewData on student1 to see the updated secret data
+// student1.viewData(); // Output the new secret data for student1
